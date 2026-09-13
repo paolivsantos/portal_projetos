@@ -31,7 +31,7 @@ col3, col4 = st.columns(2)
 with col3:
     st.subheader("Gerador e Organizador de Iframes")
     st.write("Gerenciamento e estruturação de iframes para portais.")
-    st.link_button("Acessar Aplicação", "https://piwlihrpmkw4pqmq8nbuwg.streamlit.app/", use_container_width=True)
+    st.link_button("Acessar Aplicação", "https://srgoool-piwlihrpmkw4pqmq8nbuwg.streamlit.app/", use_container_width=True)
     st.markdown("")
 
 with col4:
