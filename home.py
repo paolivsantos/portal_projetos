@@ -1,40 +1,41 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Portal de Projetos",
-    page_icon="🚀",
+    page_title="Portal de Ferramentas - R7",
+    page_icon="🛠️",
     layout="wide"
 )
 
-# 1. Definição da Homepage (Página Principal)
-def main_page():
-    st.title("Bem-vindo ao meu Portal de Projetos 🚀")
-    st.markdown("---")
-    st.write("Esta é a sua central de controle. Utilize o menu lateral à esquerda para navegar entre os seus 4 projetos desenvolvidos.")
-    
-    # Exemplo de cartões de acesso rápido na tela inicial
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.info("**Projeto 1**\n\nDescrição breve do que o primeiro projeto faz.")
-        st.info("**Projeto 3**\n\nDescrição breve do terceiro projeto.")
-        
-    with col2:
-        st.warning("**Projeto 2**\n\nDescrição breve do segundo projeto.")
-        st.warning("**Projeto 4**\n\nDescrição breve do quarto projeto.")
+st.title("🛠️ Portal de Ferramentas e Geradores")
+st.markdown("Central de acesso rápido para os utilitários de desenvolvimento e automação.")
+st.markdown("---")
 
-# 2. Registro das páginas (Home + Os 4 Projetos)
-pg = st.navigation({
-    "Geral": [
-        st.Page(main_page, title="Homepage", icon="🏠", default=True)
-    ],
-    "Meus Projetos": [
-        st.Page("pages/projeto_1.py", title="Projeto 1", icon="📊"),
-        st.Page("pages/projeto_2.py", title="Projeto 2", icon="⚙️"),
-        st.Page("pages/projeto_3.py", title="Projeto 3", icon="📈"),
-        st.Page("pages/projeto_4.py", title="Projeto 4", icon="📁"),
-    ]
-})
+# Linha 1 de Projetos
+col1, col2 = st.columns(2)
 
-# 3. Executa a navegação selecionada
-pg.run()
+with col1:
+    st.subheader("Gerador de Embeds")
+    st.write("Ferramenta para criação e configuração de embeds.")
+    st.link_button("Acessar Aplicação", "https://gerador-embeds-r7-obk9xcjfxwbfwrhotean2h.streamlit.app/", use_container_width=True)
+    st.markdown("")
+
+with col2:
+    st.subheader("Gerador de HTML Dinâmico")
+    st.write("Gerador voltado para estruturas RecordPlus.")
+    st.link_button("Acessar Aplicação", "https://gerador-recordplus-dcpkndkmykkyxayh9y4skk.streamlit.app/", use_container_width=True)
+    st.markdown("")
+
+# Linha 2 de Projetos
+col3, col4 = st.columns(2)
+
+with col3:
+    st.subheader("Gerador e Organizador de Iframes")
+    st.write("Gerenciamento e estruturação de iframes para portais.")
+    st.link_button("Acessar Aplicação", "https://piwlihrpmkw4pqmq8nbuwg.streamlit.app/", use_container_width=True)
+    st.markdown("")
+
+with col4:
+    st.subheader("Dashboard Lei do Bem")
+    st.write("Painel para acompanhamento de horas e dados da Lei do Bem.")
+    st.link_button("Acessar Aplicação", "https://dashboardhorasleidobem.streamlit.app/", use_container_width=True)
+    st.markdown("")
